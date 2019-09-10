@@ -1,0 +1,3 @@
+btn1=List All Locales???
+englishTag=English
+frenchTag=Frenchs

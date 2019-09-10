@@ -1,0 +1,3 @@
+btn1=Montrer tous les Locales
+englishTag=Anglais
+frenchTag=Francais
