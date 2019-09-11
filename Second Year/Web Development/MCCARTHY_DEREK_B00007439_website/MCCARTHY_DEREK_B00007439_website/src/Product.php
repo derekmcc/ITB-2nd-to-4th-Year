@@ -1,0 +1,265 @@
+<?php
+/**
+ * Product object class
+ */
+
+namespace Itb;
+
+use Mattsmithdev\PdoCrud\DatabaseTable;
+use Mattsmithdev\PdoCrud\DatabaseManager;
+
+/**
+ * Class Product
+ * @package Itb
+ */
+class Product extends DatabaseTable
+{
+    /**
+     * product id of type int
+     * @var
+     */
+    private $id;
+
+    /**
+     * product name of type string
+     * @var
+     */
+    private $name;
+
+    /**
+     * product description of type string
+     * @var
+     */
+    private $description;
+
+    /**
+     * product quantity of type int
+     * @var
+     */
+    private $quantity;
+
+    /**
+     * product price of type float
+     * @var
+     */
+    private $price;
+
+    /**
+     * product image of type string
+     * @var
+     */
+    private $image;
+
+    /**
+     * get the product id
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * set the product id
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * get the product name
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * set the product name
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * get the product description
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * set the product description
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * get the product quantity
+     * @return mixed
+     */
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+
+    /**
+     * set the product quantity
+     * @param mixed $quantity
+     */
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+    }
+
+    /**
+     * get the product price
+     * @return mixed
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * set the product price
+     * @param mixed $price
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
+
+    /**
+     * get the product image
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * set the product image
+     * @param mixed $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    /**
+     * get product by its id
+     * @param $id
+     * @return mixed|null
+     */
+    public static function getOneById($id)
+    {
+        $db = new DatabaseManager();
+        $connection = $db->getDbh();
+
+        $sql = "SELECT * FROM products WHERE id=$id";
+        $statement = $connection->prepare($sql);
+        $statement->bindParam(':id', $id, \PDO::PARAM_STR);
+        $statement->setFetchMode(\PDO::FETCH_CLASS, __CLASS__);
+        $statement->execute();
+
+        if ($object = $statement->fetch()) {
+            return $object;
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * delete the chosen product
+     * @param $id
+     * @return bool
+     */
+    public static function deleteProduct($id)
+    {
+        $db = new DatabaseManager();
+        $connection = $db->getDbh();
+
+        $sql = "DELETE FROM products WHERE id=$id";
+
+        $numRowsAffected = $connection->exec($sql);
+
+        if($numRowsAffected > 0){
+            $queryWasSuccessful = true;
+        } else {
+            $queryWasSuccessful = false;
+        }
+
+        return $queryWasSuccessful;
+    }
+
+    /**
+     * update product details
+     * @param $id
+     * @param $name
+     * @param $description
+     * @param $price
+     * @param $quantity
+     * @param $image
+     * @return bool
+     */
+    public static function updateProduct($id, $name, $description, $price, $quantity, $image)
+    {
+        $db = new DatabaseManager();
+        $connection = $db->getDbh();
+
+        $sql = "UPDATE products SET name = '$name', description = '$description', price = '$price', quantity = '$quantity',
+        image = '$image' WHERE id='$id'";
+        $numRowsAffected = $connection->exec($sql);
+
+        // can set Boolean variable in a single statement
+     //   $queryWasSuccessful = ($numRowsAffected > 0);
+
+        if($numRowsAffected > 0){
+            $queryWasSuccessful = true;
+        } else {
+            $queryWasSuccessful = false;
+        }
+
+        return $queryWasSuccessful;
+    }
+
+    /**
+     * create a new product
+     * @param $name
+     * @param $description
+     * @param $price
+     * @param $quantity
+     * @param $image
+     * @return bool
+     */
+    public static function createProduct($name, $description, $price, $quantity, $image)
+    {
+        //return $queryWasSuccessful;
+        $db = new DatabaseManager();
+        $connection = $db->getDbh();
+
+        $sql = "INSERT into products (name, description, price, quantity, image) VALUES ('$name', '$description', '$price', '$quantity', '$image')";
+
+        $numRowsAffected = $connection->exec($sql);
+
+        if($numRowsAffected > 0){
+            $queryWasSuccessful = true;
+        } else {
+            $queryWasSuccessful = false;
+        }
+        return $queryWasSuccessful;
+    }
+
+}

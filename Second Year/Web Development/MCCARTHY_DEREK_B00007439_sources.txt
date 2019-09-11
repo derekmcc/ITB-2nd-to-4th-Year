@@ -1,0 +1,80 @@
+Image Sources
+
+header1.png
+http://comicvine.gamespot.com/forums/battles-7/thor-vs-guardians-of-the-galaxy-movie-versions-1588804/ 
+
+header2.png
+https://forums.marvelheroes.com/discussion/263412/guardians-of-the-galaxy-vol-2-starts-production-new-cast-announced 
+
+header3.png
+http://nukethefridge.com/wp-content/uploads/2014/05/guardians-galaxy-walking.jpg 
+
+header4.png
+http://gallsource.com/movie-wallpaper/guardians-of-the-galaxy-movie-wide-wallpaper
+
+about_image.png & header5.png
+https://www.comicbookmovie.com/guardians_of_the_galaxy/james-gunn-reveals-the-first-guardians-of-the-galaxy-a147231
+
+symbol.png
+https://kaymiles2014.wordpress.com/unit-3/badges-sci-fi-logos-symbols/research-for-badges-sci-fi-logos-symbols/ 
+
+gog2.png
+https://www.google.ie/search?q=Guardians+of+the+Galaxy+2+Coming+2017&espv=2&biw=1707&bih=817&site=webhp&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiSh-qm49bQAhWLBsAKHQxKA60Q_AUIBigB#imgrc=su61MEPwIblklM%3A 
+
+user.ico
+http://www.iconarchive.com/show/soft-scraps-icons-by-hopstarter/User-Administrator-Green-icon.html 
+
+img1.png
+https://www.superherostuff.com/guardians-of-the-galaxy/standees/guardians-of-the-galaxy-gamora-cardboard-cutout.html?itemcd=standupgoggamora
+
+img2.png
+https://www.superherostuff.com/guardians-of-the-galaxy/toys/groot-mr.-potato-head.html?itemcd=toygotggrootpotato
+
+img3.png
+https://www.superherostuff.com/guardians-of-the-galaxy/throw-blanket/guardians-of-the-galaxy-poster-fleece-throw-blanket.html?itemcd=throwgotgposter
+
+img4.png
+https://www.superherostuff.com/guardians-of-the-galaxy/buttons/gotg-i-am-groot-button.html?itemcd=bttngotgiamgroot
+
+img5.png
+https://www.superherostuff.com/guardians-of-the-galaxy/magnets/gotg-rocket-raccoon-soft-magnet.html?itemcd=maggogrocketsoft
+
+img6.png
+https://www.superherostuff.com/guardians-of-the-galaxy/cookie-jars/groot-dancing-groot-cookie-jar.html?itemcd=jargotggroot	
+
+img7.png
+https://www.superherostuff.com/guardians-of-the-galaxy/standees/gotg-drax-the-destroyer-cardboard-cutout.html?itemcd=standupgogdrax
+
+img8.png
+https://www.superherostuff.com/guardians-of-the-galaxy/glasses-and-mugs/guardians-of-the-galaxy-ceramic-mug.html?itemcd=glswgogcermug	
+
+img9.png
+https://www.superherostuff.com/guardians-of-the-galaxy/buttons/gotg-star-lord-button.html?itemcd=bttngotgstarlordrd	
+
+img10.png
+https://www.superherostuff.com/guardians-of-the-galaxy/t-shirts/guardians-rocket-symbol-30-single-t-shirt.html?itemcd=tsgogrrsym	
+
+img11.png
+https://www.superherostuff.com/star-lord/bobble-heads/star-lord-pop-vinyl-bobble-head.html?itemcd=toygogstarlordbob
+
+img12.png
+https://www.superherostuff.com/guardians-of-the-galaxy/wristbands/guardians-of-the-galaxy-wristband-set.html?itemcd=brcltgogset
+
+Font Source (Dalle Regular)
+http://www.fonts2u.com/dalle.font
+
+Video Source
+https://www.youtube.com/watch?v=d96cjJhvlMA 
+
+
+
+PHP Sources
+
+Image upload
+I implemented the image upload php code into my own source code for users to be able to upload and change their profile pictures. As this code, only uploaded the
+pictures to a folder I added the functionality of uploading and storing the image path to my database and setting the users profile picture to the uploaded picture. 
+http://www.tizag.com/phpT/fileupload.php 
+
+Available on GitHub
+https://github.com/derekmcc/Database-driven-e-commerce-website
+

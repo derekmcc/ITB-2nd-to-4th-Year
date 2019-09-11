@@ -1,0 +1,55 @@
+<?php
+
+namespace Itb;
+class DatabaseController{
+
+    function dbConnect(){
+        $dbHost = "localhost";
+        $dbUserName = "root";
+        $dbPassword = "root";
+        $dbName = "shop";
+
+        // DSN - the Data Source Name - required by the PDO to connect
+        $dsn = 'mysql:host=' . $dbHost . ';dbname=' . $dbName;
+
+        // attempt to create a connection to the database
+        try {
+            $connection = new \PDO($dsn, $dbUserName, $dbPassword);
+        } catch (\PDOException $e) {
+            // deal with connection error
+            print 'ERROR - there was a problem trying to create DB connection' . PHP_EOL;
+            return null;
+        }
+
+        return $connection;
+    }
+
+    function getAllstock(){
+        // Standard sql statement getting all items from our "products" table
+        $sql = "SELECT productID, productName, price FROM stock";
+
+        // Get a database connection using the connectToDatabase function and
+        // query the database using the SQL statement above.
+        // Assign the results to the $result variable
+        $result = databaseConnect()->query($sql);
+        $i=1;
+        // If there's more than 0 results
+        if ($result->num_rows > 0) {
+            print "<table>";
+
+            while($row = $result->fetch_assoc()) {
+                // Print text and html
+                print   "<tr><td>" . "<img src=\"/images/stock/img$i.png\"  alt=\"Guardians of the Galaxy\" width=\"183\" height=\"236\"> . </td>" .
+                    "<td>" . "ID: " . $row["productID"] . "</td>" .
+                    "<td>" . "Name: " . $row["productName"] . "</td>" .
+                    "<td>" . "Price: " . $row["price"] . "</td><tr>";
+                $i++;
+                //  echo "<img src=\"/../public/images/stock/img$i.png\"  alt=\"Guardians of the Galaxy\" width=\"183\" height=\"236\">";
+            }
+            print "</table>";
+        } else {
+            print "0 results";
+        }
+    }
+
+}

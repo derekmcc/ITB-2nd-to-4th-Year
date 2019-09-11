@@ -1,0 +1,91 @@
+<?php
+namespace Itbs;
+class DatabaseCRUD
+{
+
+    function connectToDatabase()
+    {
+        // Name of server - localhost by default
+        $serverName = "localhost";
+        // Login for phpMyAdmin
+        // Username is root by default
+        $username = "root";
+        // Password is blank by default
+        $password = "root";
+        // Name of your database - video example is "shop2"
+        $dbName = "gotg_user";
+
+        // Create a mySQL connection using the parameters listed above
+      //  $conn = new mysqli($serverName, $username, $password, $dbName);
+        $conn = new \mysqli($serverName, $username, $password, $dbName);
+
+        // If connection is unsuccessful
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // If connection is successful - return the connection as a variable
+        return $conn;
+    }
+
+// Create product
+    function createUsers()
+    {
+        $username="admin" ;
+        $password='admin';
+        $role='2';
+        $image='../public/images/admin.ico';
+        // If the name 'name' appears in the url
+        // Get the value of name and any other values (ie. productName, productPrice)
+        // and use it in our SQL command and query the database
+       // if (isset($_POST["name"])) {
+         //   $productName = $_POST['name'];
+           // $productPrice = $_POST['price'];
+
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+        $this->password = $hashedPassword;
+
+        /*    $sql = "INSERT INTO `users` (`username`, `password`, `hashedPassword`, 'role', 'image')
+                VALUES (NULL, '" . $username. "', " . $password. " ,". $hashedPassword. $role . ")";*/
+        $sql = "INSERT INTO users (username, password, hashedPassword, role, image)
+            VALUES ('$username', '$password', '$hashedPassword', '$role', '$image')";
+            //connectToDatabase()->query($sql);
+        $this->connectToDatabase()->query($sql);
+        //}
+    }
+    //$username, $password, $role, $image
+    function seedUser(){
+
+        $serverName = "localhost";
+        $dbUsername = "root";
+        $dbPassword = "root";
+        $dbname = "gotg_user";
+
+        $username="admin" ;
+        $password='admin';
+        $role='2';
+        $image='../public/images/admin.ico';
+
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+        $this->password = $hashedPassword;
+        try {
+            $conn = new PDO("mysql:host=$serverName;dbname=$dbname", $dbUsername, $dbPassword);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $sql = "INSERT INTO users (username, password, hashedPassword, role, image)
+            VALUES ('$username', '$password', '$hashedPassword', '$role', '$image')";
+            // use exec() because no results are returned
+            $conn->exec($sql);
+            echo "New record created successfully";
+        }
+        catch(PDOException $e)
+        {
+            echo $sql . "<br>" . $e->getMessage();
+        }
+
+        $conn = null;
+
+    }
+}

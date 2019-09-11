@@ -1,0 +1,13 @@
+{
+  "scripts":{
+    "doc":"php phpDocumentor.phar"
+  },
+  "require": {
+    "mattsmithdev/pdo-crud-for-free": "dev-master"
+  },
+  "autoload":{
+    "psr-4":{
+      "Itb\\":"src"
+    }
+  }
+}

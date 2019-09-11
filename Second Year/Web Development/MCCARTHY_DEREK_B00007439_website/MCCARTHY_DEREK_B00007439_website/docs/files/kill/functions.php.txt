@@ -1,0 +1,49 @@
+<?php
+
+function databaseConnect(){
+    // login details for phpMyAdmin
+    $dbHost = "localhost";
+    $dbUserName = "root";
+    $dbPassword = "root";
+    $dbName = "shop";
+
+    // create a mySQL connection using the parameters listed above
+    $dsn = new mysqli($dbHost, $dbUserName, $dbPassword, $dbName);
+
+    // If connection is unsuccessful
+    if ($dsn->connect_error) {
+        die("Connection failed: " . $dsn->connect_error);
+    }
+
+    // If connection is succesful - return the connection as a variable
+    return $dsn;
+}
+
+function getStock(){
+    // Standard sql statement getting all items from our "products" table
+    $sql = "SELECT productID, productName, price FROM stock";
+
+    // Get a database connection using the connectToDatabase function and
+    // query the database using the SQL statement above.
+    // Assign the results to the $result variable
+    $result = databaseConnect()->query($sql);
+    $i=1;
+    // If there's more than 0 results
+    if ($result->num_rows > 0) {
+        print "<table>";
+
+        while($row = $result->fetch_assoc()) {
+            // Print text and html
+            print   "<tr><td>" . "<img src=\"/../public/images/stock/img$i.png\"  alt=\"Guardians of the Galaxy\" width=\"183\" height=\"236\"> . </td>" .
+                    "<td>" . "ID: " . $row["productID"] . "</td>" .
+		            "<td>" . "Name: " . $row["productName"] . "</td>" .
+                    "<td>" . "Price: " . $row["price"] . "</td><tr>";
+            $i++;
+          //  echo "<img src=\"/../public/images/stock/img$i.png\"  alt=\"Guardians of the Galaxy\" width=\"183\" height=\"236\">";
+        }
+        print "</table>";
+    } else {
+        print "0 results";
+    }
+}
+

@@ -1,0 +1,28 @@
+<?php
+namespace Itb;
+use Itb\User;
+
+/**
+ * Class AddUser
+ * @package Itb
+ */
+class AddUser extends User
+{
+    /**
+     * @param $username
+     * @param $password
+     */
+    public static function insertUser($username, $password){
+
+        $register = new User();
+        $register->setUsername($username);
+        $register->setPassword($password);
+        $register->setRole(1);
+        $register->setImage('/images/user.ico');
+
+        $success = User::insert($register);
+        require_once __DIR__ . '/../templates/shop.php';
+        print 'Hello';
+        print '<hr>';
+    }
+}

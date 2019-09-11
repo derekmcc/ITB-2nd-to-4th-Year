@@ -1,0 +1,50 @@
+<?php
+
+namespace Itb;
+
+use Mattsmithdev\PdoCrud\DatabaseManager;
+use Mattsmithdev\PdoCrud\DatabaseTable;
+
+class ProductController extends DatabaseTable
+{
+    public function getAllProducts()
+    {
+        $db = new DatabaseManager();
+        $connection = $db->getDbh();
+
+        $statement = $connection->prepare('SELECT * from dvds');
+        $statement->setFetchMode(\PDO::FETCH_CLASS, '\\Itb\\Dvd');
+        $statement->execute();
+
+        $dvds = $statement->fetchAll();
+
+        return $dvds;
+    }
+
+    function getOneProduct($connection, $id)
+    {
+        $sql = "SELECT * FROM products WHERE id=$id";
+        $statement = $connection->query($sql);
+
+        if ($row = $statement->fetch()) {
+            return $row;
+        } else {
+            return null;
+        }
+    }
+
+    function deleteProduct($connection, $id)
+    {
+        $sql = "DELETE FROM products WHERE id=$id";
+
+        $numRowsAffected = $connection->exec($sql);
+
+        if($numRowsAffected > 0){
+            $queryWasSuccessful = true;
+        } else {
+            $queryWasSuccessful = false;
+        }
+
+        return $queryWasSuccessful;
+    }
+}
