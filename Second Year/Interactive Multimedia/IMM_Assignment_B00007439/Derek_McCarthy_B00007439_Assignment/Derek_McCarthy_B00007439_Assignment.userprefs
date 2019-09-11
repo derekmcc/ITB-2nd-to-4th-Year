@@ -1,0 +1,28 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GraveYardTiles\Scripts\Charater.cs">
+    <Files>
+      <File FileName="Assets\Scripts\PlayerControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MovePlatformXaxis.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MovePlatformYaxis.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\testMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerDisplay.cs" Line="1" Column="1" />
+      <File FileName="Assets\GraveYardTiles\Scripts\AnimationScripts\AttackBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets\GraveYardTiles\Scripts\Person.cs" Line="15" Column="2" />
+      <File FileName="Assets\GraveYardTiles\Scripts\Charater.cs" Line="136" Column="23" />
+      <File FileName="Assets\GraveYardTiles\Scripts\EnemyStates\IdleState.cs" Line="1" Column="1" />
+      <File FileName="Assets\GraveYardTiles\Scripts\EnemyStates\IEnemyState.cs" Line="1" Column="1" />
+      <File FileName="Assets\GraveYardTiles\Scripts\EnemyStates\MeleState.cs" Line="19" Column="11" />
+      <File FileName="Assets\GraveYardTiles\Scripts\EnemyStates\PatrolState.cs" Line="18" Column="49" />
+      <File FileName="Assets\GraveYardTiles\Scripts\EnemyStates\RangedState.cs" Line="13" Column="2" />
+      <File FileName="Assets\GraveYardTiles\Scripts\Enemy.cs" Line="36" Column="33" />
+      <File FileName="Assets\GraveYardTiles\Scripts\CollisionIgnore.cs" Line="1" Column="1" />
+      <File FileName="Assets\GraveYardTiles\Scripts\EnemyEyes.cs" Line="6" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

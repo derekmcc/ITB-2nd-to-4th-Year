@@ -1,0 +1,10 @@
+Game Controls
+*********************************************************************
+Left: Left Arrow
+Right: Right Arrow
+Slide: Down Arrow (While moving left or right)
+Jump: Up Arrow
+Sword Attack: Spacebar
+Throw Knife: Left Control
+Climb Ladder: Left ALT 
+*********************************************************************

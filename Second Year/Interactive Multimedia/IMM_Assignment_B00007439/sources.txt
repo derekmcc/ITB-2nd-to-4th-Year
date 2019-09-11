@@ -1,0 +1,55 @@
+Fonts
+Font Game UI: 
+	https://fonts.google.com/specimen/Carter+One?pageId=108789727245621802602&selection.family=Carter+One  
+Font For Buttons: 
+	https://www.fontsquirrel.com/fonts/komika-axis
+
+Sprites
+Shield:
+	http://www.free-icons-download.net/blue-shield-icon-30779/
+Coins & Heart: 
+	https://opengameart.org/content/shining-coin-shining-health-shining-power-up-sprite-sheets  
+Ladder: 
+	http://scribblenauts.wikia.com/wiki/Ladder  
+Coin(Animated): 
+	https://www.assetstore.unity3d.com/en/#!/content/19955
+Tile Set:
+	http://www.gameart2d.com/free-graveyard-platformer-tileset.html 
+Character: 
+	http://www.gameart2d.com/ninja-adventure---free-sprites.html 
+Enemies: 
+	http://www.gameart2d.com/ninja-girl---free-sprites.html
+Health Bar and Lives Sprites I created myself
+
+Sound Files
+Female hurt: 
+	https://www.freesound.org/people/thatbennyguy/sounds/203976/
+Male hurt:  
+	https://www.freesound.org/people/Artmasterrich/sounds/345433/
+Female dying: 
+	https://www.freesound.org/people/Artmasterrich/sounds/345455/ 
+Male dying: 
+	https://www.freesound.org/people/Under7dude/sounds/163442/
+Background Music(KungFu): 
+	https://www.youtube.com/watch?v=G0yB0kiUmHQ
+Health pick up: 
+	https://www.freesound.org/people/josepharaoh99/sounds/368651/
+Game Over Sound: 
+	https://www.freesound.org/people/mouse85224/sounds/371205/
+Coin: 
+	https://www.freesound.org/people/bradwesson/sounds/135936/
+Level Failed: 
+	https://www.freesound.org/people/mouse85224/sounds/371205/
+Level Loading: 
+	https://www.freesound.org/people/Sirkoto51/sounds/360608/
+Success: 
+	https://www.freesound.org/people/maxmakessounds/sounds/353546/
+Menu Music: 
+	https://www.freesound.org/people/kickhat/sounds/342897/
+
+
+UI Components
+Buttons:  
+	http://www.gameart2d.com/free-bubble-game-button-pack.html
+Header text on Welcome and Game over screens:
+	 https://cooltext.com/
