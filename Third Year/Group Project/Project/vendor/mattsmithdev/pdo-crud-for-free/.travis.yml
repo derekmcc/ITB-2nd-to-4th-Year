@@ -1,0 +1,17 @@
+
+language: php
+php:
+  - '7'
+
+services:
+  - mysql
+
+before_install:
+  - mysql -u root -e "create database IF NOT EXISTS crud_test"
+  - mysql -u root crud_test < crud_test.sql
+
+install:
+  - composer update
+
+script:
+  - phpunit -c phpunit_travis.xml

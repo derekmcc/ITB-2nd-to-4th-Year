@@ -1,0 +1,18 @@
+{
+  "require": {
+    "mattsmithdev/pdo-crud-for-free": "dev-master",
+    "uxweb/sweet-alert": "^1.4",
+    "twbs/bootstrap": "4.0.0",
+    "phpunit/phpunit": "3.7.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Itb\\": "src"
+    }
+  },
+  "scripts":{
+    "test":"php phpunit.phar",
+    "coverage":"php phpunit.phar --configuration phpunit_coverage.xml",
+    "isolate":"php phpunit.phar --configuration phpunit_isolate.xml"
+  }
+}
