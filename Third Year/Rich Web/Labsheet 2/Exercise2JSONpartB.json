@@ -1,0 +1,20 @@
+{	"VactionDetails" : {
+		"Person" : [
+		"Derek", "JaSON"]},
+	"FlightDetails" : [
+		{"Departure" : "Dublin"},
+		{"Date" : "March 4th"},
+		{"Time" : "12:15pm"},
+		{"Destination" : "Rome"},
+		{"ArrivalTime" : "15:25"}
+	],
+	"ReturnDetails" : [
+		{"Departure" : "Rome"},
+		{"Date" : "March 11th"},
+		{"Time" : "16:05pm"},
+		{"Destination" : "Dublin"},
+		{"ArrivalTime" : "17:20"}],
+	"Accomadation" : {
+	"Hotel" : "Radisson Hotel",
+	"Duration" : "7 Nights"}
+}

@@ -1,0 +1,25 @@
+
+{"InvoiceDetails" : {
+	"Date" : "01 January 2013",
+	"Invoice" : "Invoice NO.20130101-1"},
+	
+	"Company" : { 
+		"Name" : "Full Name",
+		"Address" : [
+		"Address Line 1",
+		"Address Line 2"],
+		"City" : "CITY"},
+	"ItemDetails" : [
+		{"Item" : "Web design and development."},
+		{"Rate" : "$50"},
+		{"Units" : "10"},
+		{"Item" : "Annual web hosting."},
+		{"Rate" : "$100.00"},
+		{"Units" : "1"}],
+	"TotalDetails" : [
+		{"Total" : "$600.00"},
+		{"GST" : "90.00"},
+		{"Paid" : "200"},
+		{"Due" : "$490"}
+	]
+	}

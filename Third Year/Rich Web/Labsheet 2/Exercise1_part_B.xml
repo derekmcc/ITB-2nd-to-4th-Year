@@ -1,0 +1,24 @@
+<vacation>
+	<personal_info><b>Passanger</b>
+		<br/><person1>Derek</person1>
+		<br/><person2>Jayden</person2><br/>
+	</personal_info>
+	<br/><flight_details><b>Depature Flight Details</b>
+		<br/><depature>Dublin</depature>
+		<br/><depature_date1>March 4th</depature_date1>
+		<br/><depature_time>12:15pm</depature_time>
+		<br/><destination>Rome</destination>
+		<br/><arrival_time>15:25pm</arrival_time><br/>
+	</flight_details>
+	<br/><return_flight_details><b>Return Flight Details</b>
+		<br/><depature>Rome</depature>
+		<br/><depature_date1>March 11th</depature_date1>
+		<br/><depature_time>16:05pm</depature_time>
+		<br/><destination>Dublin</destination>
+		<br/><arrival_time>17:20pm</arrival_time><br/>
+	</return_flight_details>
+	<br/><accomadation><b>Accomadation</b>
+		<br/><hotel>Radisson Hotel</hotel>
+		<br/><duration>7 Nights</duration>
+	</accomadation>
+</vacation>
