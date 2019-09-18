@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main(){
+
+  //declare variables
+  int columns = 100;
+  int rows = 100;
+  int area[columns][rows];
+  int i=0, x=0, y, j;
+  int neighbours = 0;
+  srand(time(NULL));
+  int nextGen[columns][rows];
+  int infected = 10;
+  int recovered = 15;
+  int  susceptible = 25;
+  int empty = 50;
+  //create area(2D Grid)
+  for (i = 1;i < columns; i++){
+    for (x = 1; x < rows; x++){
+      
+      area[i][x] = rand() % 2;
+
+        for (y = -1;y < columns; y++){
+	  for (j = -1; j < rows; j++){
+	    neighbours += area[i+y][x+j];
+	  }//end inner for
+	}//end outer for
+
+	neighbours -= area[i][x];
+	printf("*");
+	//Rules
+	if ((area[i][x] == 1) && (neighbours < 2)){
+	  nextGen[x][y] = 0;
+	}//end if
+	else if ((area[i][x] == 1) && (neighbours > 3)){
+	  nextGen[x][y] = 0;
+	}//end else if
+	else if ((area[i][x] == 0) && (neighbours == 3)){
+	  nextGen[x][y] = 1;
+	}//end else if
+    }//end inner for
+  }//end outer for
+
+ //*area = nextGen;
+  return 0;
+}//end main
