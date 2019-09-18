@@ -1,0 +1,2 @@
+composer remove maker
+composer require maker 1.0
