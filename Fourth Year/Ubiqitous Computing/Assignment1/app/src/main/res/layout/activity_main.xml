@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="386dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="129dp"
+        android:text="@string/main_rss_input_label"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtRssAddress"
+        android:layout_width="0dp"
+        android:layout_height="111dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:hint="RSS html link..."
+        android:inputType="textMultiLine"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnEnter"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/holo_green_dark"
+        android:onClick="buttonListener"
+        android:text="@string/main_submit_button"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnClear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRssAddress" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_red_dark"
+        android:elevation="0dp"
+        android:onClick="buttonListener"
+        android:text="@string/main_clear_button"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEnter" />
+
+</android.support.constraint.ConstraintLayout>
